@@ -6,12 +6,12 @@ import java.io.*;
 public class EnumSingletonTest {
     public static void main(String[] args) throws IOException {
         EnumSingleton instance=EnumSingleton.INSTANCE;
-//        EnumSingleton instance1=EnumSingleton.INSTANCE;
-//        System.out.println(instance==instance1);
+        EnumSingleton instance1=EnumSingleton.INSTANCE;
+        System.out.println(instance==instance1);
 
-//        try(ObjectOutputStream oos=new ObjectOutputStream( new FileOutputStream( "EnumSingleton" ) )) {
-//            oos.writeObject( instance );
-//        }
+        try(ObjectOutputStream oos=new ObjectOutputStream( new FileOutputStream( "EnumSingleton" ) )) {
+            oos.writeObject( instance );
+        }
 
         try (ObjectInputStream ois=new ObjectInputStream( new FileInputStream( "EnumSingleton" ) )){
             EnumSingleton object=((EnumSingleton) ois.readObject());
