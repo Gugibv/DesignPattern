@@ -1,4 +1,4 @@
-package com.grey.designpattern.observer.anotherexample;
+package com.grey.designpattern.observer.v2;
 import java.util.ArrayList;
 import java.util.List;
 
