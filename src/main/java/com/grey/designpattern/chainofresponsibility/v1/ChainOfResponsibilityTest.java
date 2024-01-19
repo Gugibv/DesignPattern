@@ -1,4 +1,4 @@
-package com.grey.designpattern.chainofresponsibility;
+package com.grey.designpattern.chainofresponsibility.v1;
 
 
 
