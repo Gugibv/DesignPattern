@@ -1,4 +1,4 @@
-package com.grey.designpattern.templatemethod;
+package com.grey.designpattern.templatemethod.v1;
 
 
 public class TemplateMethodTest {
