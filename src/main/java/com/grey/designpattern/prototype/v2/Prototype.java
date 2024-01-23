@@ -1,5 +1,10 @@
 package com.grey.designpattern.prototype.v2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
 public class Prototype {
     public static void main (String[] args)
     {
@@ -27,5 +32,24 @@ public class Prototype {
         });
 
         ColorRegistry.getColor("yellow").addColor();
+
+        // 源码应用举例 1
+        Integer[] array = {1, 2, 3};
+        List<Integer> list = Arrays.asList(array);
+
+        list.set(0, 4);
+        System.out.println(Arrays.toString(array)); // [4, 2, 3]
+
+        // 源码应用举例 2
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add("Hello");
+        arrayList.add("World");
+
+        List<String> readOnlyList = Collections.list(Collections.enumeration(arrayList));
+
+        System.out.println(readOnlyList);
+
+        List<Integer> list2 = Collections.nCopies(5, 10);
+        System.out.println(list2); // prints: [10, 10, 10, 10, 10]
     }
 }
