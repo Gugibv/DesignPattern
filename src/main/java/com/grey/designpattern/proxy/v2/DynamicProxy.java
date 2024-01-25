@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class DynamicProxy implements InvocationHandler {
-    private final Object target;//被代理的对象
+    private final Subject target;//被代理的对象
 
     public DynamicProxy(RealSubject realSubject) {
         this.target = realSubject;

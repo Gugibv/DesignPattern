@@ -9,7 +9,7 @@ public class Client {
         RealSubject realSubject = new RealSubject();
         InvocationHandler handler = new DynamicProxy(realSubject);
 
-        ProxySubject proxy = (ProxySubject) Proxy.newProxyInstance(
+        Subject proxy = (Subject) Proxy.newProxyInstance(
                 realSubject.getClass().getClassLoader(),
                 realSubject.getClass().getInterfaces(),
                 handler);
